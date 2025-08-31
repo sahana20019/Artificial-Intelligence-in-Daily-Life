@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Daily Life - Impact, Timeline & Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full glass-effect z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-brain text-2xl gradient-text"></i>
+                    <span class="text-xl font-bold gradient-text">AI Daily Life</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition">About</a>
+                    <a href="#impact" class="text-gray-700 hover:text-purple-600 transition">Impact</a>
+                    <a href="#timeline" class="text-gray-700 hover:text-purple-600 transition">Timeline</a>
+                    <a href="#future" class="text-gray-700 hover:text-purple-600 transition">Future</a>
+                    <a href="#creative" class="text-gray-700 hover:text-purple-600 transition">Creative Ideas</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen hero-bg flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full"></div>
+            <div class="floating absolute top-40 right-20 w-32 h-32 bg-white/10 rounded-full" style="animation-delay: 1s;"></div>
+            <div class="floating absolute bottom-20 left-1/3 w-24 h-24 bg-white/10 rounded-full" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 scroll-reveal">
+                AI in Daily Life
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto scroll-reveal typing-effect">
+                Explore how artificial intelligence is transforming our world
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 scroll-reveal">
+                <button onclick="scrollToSection('about')" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                    Start Exploring
+                </button>
+                <button onclick="scrollToSection('timeline')" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition">
+                    View Timeline
+                </button>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- About AI Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Understanding AI</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Artificial Intelligence is not just technology—it's becoming an integral part of our daily existence
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl scroll-reveal">
+                    <div class="image-overlay h-48 rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AI Concept" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mb-6 -mt-16 relative z-10">
+                        <i class="fas fa-robot text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">What is AI?</h3>
+                    <p class="text-gray-600">
+                        AI refers to systems that can perform tasks requiring human intelligence, including learning, reasoning, problem-solving, and decision-making.
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl scroll-reveal">
+                    <div class="image-overlay h-48 rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Smart Home" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-6 -mt-16 relative z-10">
+                        <i class="fas fa-home text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">AI at Home</h3>
+                    <p class="text-gray-600">
+                        From smart assistants to personalized recommendations, AI makes our homes more efficient, comfortable, and connected.
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl scroll-reveal">
+                    <div class="image-overlay h-48 rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AI Growth" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-6 -mt-16 relative z-10">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Growth & Adoption</h3>
+                    <p class="text-gray-600">
+                        AI adoption is accelerating across industries, with 77% of devices already using some form of AI technology.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">AI's Impact on Daily Life</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Discover how artificial intelligence is revolutionizing different aspects of our everyday experiences
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="impact-card bg-white rounded-xl shadow-lg card-hover scroll-reveal" data-category="health">
+                    <div class="image-overlay h-40 rounded-t-xl">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Healthcare AI" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl mb-4 text-red-500">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Healthcare</h3>
+                        <ul class="text-gray-600 space-y-1 text-sm">
+                            <li>• Disease prediction</li>
+                            <li>• Medical imaging</li>
+                            <li>• Drug discovery</li>
+                            <li>• Personalized treatment</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="impact-card bg-white rounded-xl shadow-lg card-hover scroll-reveal" data-category="education">
+                    <div class="image-overlay h-40 rounded-t-xl">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Education AI" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl mb-4 text-blue-500">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Education</h3>
+                        <ul class="text-gray-600 space-y-1 text-sm">
+                            <li>• Personalized learning</li>
+                            <li>• Smart tutoring</li>
+                            <li>• Automated grading</li>
+                            <li>• Language translation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="impact-card bg-white rounded-xl shadow-lg card-hover scroll-reveal" data-category="transport">
+                    <div class="image-overlay h-40 rounded-t-xl">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Transportation AI" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl mb-4 text-green-500">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Transportation</h3>
+                        <ul class="text-gray-600 space-y-1 text-sm">
+                            <li>• Self-driving cars</li>
+                            <li>• Traffic optimization</li>
+                            <li>• Route planning</li>
+                            <li>• Public transport</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="impact-card bg-white rounded-xl shadow-lg card-hover scroll-reveal" data-category="entertainment">
+                    <div class="image-overlay h-40 rounded-t-xl">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Entertainment AI" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl mb-4 text-purple-500">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Entertainment</h3>
+                        <ul class="text-gray-600 space-y-1 text-sm">
+                            <li>• Content recommendations</li>
+                            <li>• Game AI</li>
+                            <li>• Music generation</li>
+                            <li>• Virtual reality</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="impact-card bg-white rounded-xl shadow-lg card-hover scroll-reveal" data-category="shopping">
+                    <div class="image-overlay h-40 rounded-t-xl">
+                        <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Shopping AI" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl mb-4 text-yellow-500">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Shopping</h3>
+                        <ul class="text-gray-600 space-y-1 text-sm">
+                            <li>• Product recommendations</li>
+                            <li>• Price optimization</li>
+                            <li>• Chatbot support</li>
+                            <li>• Inventory management</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="impact-card bg-white rounded-xl shadow-lg card-hover scroll-reveal" data-category="finance">
+                    <div class="image-overlay h-40 rounded-t-xl">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Finance AI" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl mb-4 text-indigo-500">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Finance</h3>
+                        <ul class="text-gray-600 space-y-1 text-sm">
+                            <li>• Fraud detection</li>
+                            <li>• Algorithmic trading</li>
+                            <li>• Risk assessment</li>
+                            <li>• Personal banking</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="impact-card bg-white rounded-xl shadow-lg card-hover scroll-reveal" data-category="home">
+                    <div class="image-overlay h-40 rounded-t-xl">
+                        <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Smart Home AI" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl mb-4 text-pink-500">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Smart Home</h3>
+                        <ul class="text-gray-600 space-y-1 text-sm">
+                            <li>• Voice assistants</li>
+                            <li>• Energy management</li>
+                            <li>• Security systems</li>
+                            <li>• Climate control</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="impact-card bg-white rounded-xl shadow-lg card-hover scroll-reveal" data-category="work">
+                    <div class="image-overlay h-40 rounded-t-xl">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Workplace AI" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-4xl mb-4 text-teal-500">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Workplace</h3>
+                        <ul class="text-gray-600 space-y-1 text-sm">
+                            <li>• Automation</li>
+                            <li>• Data analysis</li>
+                            <li>• Project management</li>
+                            <li>• Customer service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">AI Evolution Timeline</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Journey through the remarkable history of artificial intelligence development
+                </p>
+            </div>
+            
+            <div class="relative max-w-6xl mx-auto">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item relative mb-12 scroll-reveal">
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg shadow-lg">
+                                <div class="image-overlay h-32 rounded-lg mb-4">
+                                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="1950s AI" class="w-full h-full object-cover rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">1950s - The Beginning</h3>
+                                <p class="text-gray-600">Alan Turing proposes the Turing Test. First AI conference at Dartmouth.</p>
+                            </div>
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item relative mb-12 scroll-reveal">
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-gradient-to-r from-blue-100 to-cyan-100 p-6 rounded-lg shadow-lg">
+                                <div class="image-overlay h-32 rounded-lg mb-4">
+                                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="1960s AI" class="w-full h-full object-cover rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">1960s-70s - Early Development</h3>
+                                <p class="text-gray-600">ELIZA chatbot created. First expert systems developed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item relative mb-12 scroll-reveal">
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-lg shadow-lg">
+                                <div class="image-overlay h-32 rounded-lg mb-4">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="1980s AI" class="w-full h-full object-cover rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">1980s-90s - AI Winter & Revival</h3>
+                                <p class="text-gray-600">Machine learning emerges. Neural networks gain popularity.</p>
+                            </div>
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item relative mb-12 scroll-reveal">
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-gradient-to-r from-yellow-100 to-orange-100 p-6 rounded-lg shadow-lg">
+                                <div class="image-overlay h-32 rounded-lg mb-4">
+                                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="2000s AI" class="w-full h-full object-cover rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">2000s - Big Data Era</h3>
+                                <p class="text-gray-600">Deep learning breakthroughs. IBM Watson wins Jeopardy!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item relative mb-12 scroll-reveal">
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-gradient-to-r from-red-100 to-pink-100 p-6 rounded-lg shadow-lg">
+                                <div class="image-overlay h-32 rounded-lg mb-4">
+                                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="2010s AI" class="w-full h-full object-cover rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">2010s - Deep Learning Revolution</h3>
+                                <p class="text-gray-600">AlphaGo defeats world champion. GPT models emerge.</p>
+                            </div>
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item relative scroll-reveal">
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-gradient-to-r from-indigo-100 to-purple-100 p-6 rounded-lg shadow-lg pulse">
+                                <div class="image-overlay h-32 rounded-lg mb-4">
+                                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="2020s AI" class="w-full h-full object-cover rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">2020s - AI Everywhere</h3>
+                                <p class="text-gray-600">ChatGPT, DALL-E, and generative AI transform daily life.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Section -->
+    <section id="future" class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">The Future of AI</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Peek into tomorrow's AI-powered world and its potential impact on humanity
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="future-card bg-white p-8 rounded-2xl shadow-xl card-hover scroll-reveal">
+                    <div class="image-overlay h-48 rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Smart City" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-semibold">2030</h3>
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-city text-purple-600"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Smart cities with AI-managed infrastructure, reducing energy consumption by 40% and improving urban living.</p>
+                    <div class="flex items-center text-purple-600 font-semibold cursor-pointer hover:text-purple-700">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="future-card bg-white p-8 rounded-2xl shadow-xl card-hover scroll-reveal">
+                    <div class="image-overlay h-48 rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Brain Interface" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-semibold">2040</h3>
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-brain text-blue-600"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Brain-computer interfaces enable direct neural control of devices, revolutionizing healthcare and communication.</p>
+                    <div class="flex items-center text-blue-600 font-semibold cursor-pointer hover:text-blue-700">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="future-card bg-white p-8 rounded-2xl shadow-xl card-hover scroll-reveal">
+                    <div class="image-overlay h-48 rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="AGI Future" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-semibold">2050</h3>
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-globe text-green-600"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">AGI (Artificial General Intelligence) emerges, capable of understanding and learning any intellectual task.</p>
+                    <div class="flex items-center text-green-600 font-semibold cursor-pointer hover:text-green-700">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-white rounded-2xl p-8 shadow-xl scroll-reveal">
+                <h3 class="text-2xl font-semibold mb-6 text-center">Future Predictions</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Healthcare Revolution</h4>
+                            <p class="text-gray-600">AI will enable personalized medicine, predicting diseases before symptoms appear and extending human lifespan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Sustainable Living</h4>
+                            <p class="text-gray-600">AI-powered systems will optimize resource usage, helping solve climate change and create sustainable cities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Education Transformation</h4>
+                            <p class="text-gray-600">Personalized AI tutors will adapt to each student's learning style, making quality education accessible to all.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-yellow-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Work Evolution</h4>
+                            <p class="text-gray-600">AI will automate routine tasks, allowing humans to focus on creativity, innovation, and meaningful work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Ideas Section -->
+    <section id="creative" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold mb-4">Creative AI Applications</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Innovative ways AI could enhance and transform our daily experiences
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="creative-card bg-gradient-to-br from-purple-800 to-pink-800 p-8 rounded-2xl card-hover scroll-reveal">
+                    <div class="image-overlay h-48 rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AI Art" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">AI Art Companion</h3>
+                    <p class="text-gray-200 mb-4">An AI that learns your artistic style and helps you create personalized artwork, music, and stories.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Creative</span>
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Personal</span>
+                    </div>
+                </div>
+                
+                <div class="creative-card bg-gradient-to-br from-blue-800 to-cyan-800 p-8 rounded-2xl card-hover scroll-reveal">
+                    <div class="image-overlay h-48 rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" alt="Smart Garden" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Smart Garden AI</h3>
+                    <p class="text-gray-200 mb-4">An intelligent system that monitors and cares for your plants, optimizing growth and preventing diseases.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Home</span>
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Sustainable</span>
+                    </div>
+                </div>
+                
+                <div class="creative-card bg-gradient-to-br from-green-800 to-emerald-800 p-8 rounded-2xl card-hover scroll-reveal">
+                    <div class="image-overlay h-48 rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AI Chef" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Personal Chef AI</h3>
+                    <p class="text-gray-200 mb-4">AI that creates personalized recipes based on your dietary needs, available ingredients, and taste preferences.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Health</span>
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Convenience</span>
+                    </div>
+                </div>
+                
+                <div class="creative-card bg-gradient-to-br from-yellow-800 to-orange-800 p-8 rounded-2xl card-hover scroll-reveal">
+                    <div class="image-overlay h-48 rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1533134486753-c833f0ed4866?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dream AI" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Dream Analyzer</h3>
+                    <p class="text-gray-200 mb-4">AI that helps interpret your dreams and provides insights into your subconscious mind and emotions.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Wellness</span>
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Mental Health</span>
+                    </div>
+                </div>
+                
+                <div class="creative-card bg-gradient-to-br from-red-800 to-pink-800 p-8 rounded-2xl card-hover scroll-reveal">
+                    <div class="image-overlay h-48 rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Translator AI" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Universal Translator</h3>
+                    <p class="text-gray-200 mb-4">Real-time translation device that preserves cultural nuances and emotions in cross-cultural communication.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Communication</span>
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Global</span>
+                    </div>
+                </div>
+                
+                <div class="creative-card bg-gradient-to-br from-indigo-800 to-purple-800 p-8 rounded-2xl card-hover scroll-reveal">
+                    <div class="image-overlay h-48 rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Emotion AI" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Emotion Coach</h3>
+                    <p class="text-gray-200 mb-4">AI companion that helps understand and manage emotions, providing personalized mental wellness support.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Mental Health</span>
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Support</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center scroll-reveal">
+                <h3 class="text-2xl font-semibold mb-4">Share Your Creative AI Idea</h3>
+                <p class="text-gray-300 mb-8">Have an innovative AI concept? We'd love to hear about it!</p>
+                <button onclick="showIdeaForm()" class="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                    Submit Your Idea
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Try AI Features</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Experience interactive demonstrations of AI capabilities
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl scroll-reveal">
+                    <h3 class="text-2xl font-semibold mb-4">AI Image Generator</h3>
+                    <p class="text-gray-600 mb-6">Describe an image and see AI create it</p>
+                    <div class="space-y-4">
+                        <input type="text" id="imagePrompt" placeholder="A futuristic city with flying cars..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                        <button onclick="generateImage()" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition">
+                            Generate Image
+                        </button>
+                        <div id="generatedImage" class="mt-4 h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+                            <p class="text-gray-500">Your generated image will appear here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl scroll-reveal">
+                    <h3 class="text-2xl font-semibold mb-4">AI Text Assistant</h3>
+                    <p class="text-gray-600 mb-6">Get AI help with writing and ideas</p>
+                    <div class="space-y-4">
+                        <textarea id="textPrompt" placeholder="Ask me anything..." rows="3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                        <button onclick="generateText()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                            Get Response
+                        </button>
+                        <div id="generatedText" class="mt-4 p-4 bg-white rounded-lg min-h-[100px]">
+                            <p class="text-gray-500">AI response will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-brain text-2xl"></i>
+                        <span class="text-xl font-bold">AI Daily Life</span>
+                    </div>
+                    <p class="text-gray-400">Exploring the impact and future of artificial intelligence in our everyday lives.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition">About AI</a></li>
+                        <li><a href="#impact" class="hover:text-white transition">Impact</a></li>
+                        <li><a href="#timeline" class="hover:text-white transition">Timeline</a></li>
+                        <li><a href="#future" class="hover:text-white transition">Future</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">AI Research Papers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Learning Resources</a></li>
+                        <li><a href="#" class="hover:text-white transition">AI Ethics</a></li>
+                        <li><a href="#" class="hover:text-white transition">Newsletter</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Stay updated with AI news</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 AI in Daily Life. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-50 hidden">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-brain text-2xl gradient-text"></i>
+                    <span class="text-xl font-bold gradient-text">AI Daily Life</span>
+                </div>
+                <button onclick="toggleMobileMenu()">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="space-y-4">
+                <a href="#about" onclick="toggleMobileMenu()" class="block text-lg text-gray-700 hover:text-purple-600 transition">About</a>
+                <a href="#impact" onclick="toggleMobileMenu()" class="block text-lg text-gray-700 hover:text-purple-600 transition">Impact</a>
+                <a href="#timeline" onclick="toggleMobileMenu()" class="block text-lg text-gray-700 hover:text-purple-600 transition">Timeline</a>
+                <a href="#future" onclick="toggleMobileMenu()" class="block text-lg text-gray-700 hover:text-purple-600 transition">Future</a>
+                <a href="#creative" onclick="toggleMobileMenu()" class="block text-lg text-gray-700 hover:text-purple-600 transition">Creative Ideas</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Idea Form Modal -->
+    <div id="ideaModal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-6">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full">
+            <h3 class="text-2xl font-bold mb-4">Share Your AI Idea</h3>
+            <form onsubmit="submitIdea(event)">
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Your Name</label>
+                    <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Your AI Idea</label>
+                    <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500" rows="4" required></textarea>
+                </div>
+                <div class="flex gap-4">
+                    <button type="submit" class="flex-1 bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition">
+                        Submit
+                    </button>
+                    <button type="button" onclick="hideIdeaForm()" class="flex-1 bg-gray-200 text-gray-700 py-2 rounded-lg hover:bg-gray-300 transition">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- at end of body -->
+<script src="script.js"></script>
+
+</body>
+</html>
